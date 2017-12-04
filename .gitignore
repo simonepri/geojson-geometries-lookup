@@ -1,0 +1,14 @@
+# tests
+.nyc_output/
+coverage/
+
+# npm
+node_modules/
+.npm
+npm-debug.log*
+*.tgz
+package-lock.json
+npm-shrinkwrap.json
+
+# OS
+.DS_Store
