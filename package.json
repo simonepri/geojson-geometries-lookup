@@ -1,0 +1,77 @@
+{
+  "name": "geojson-geometries-lookup",
+  "version": "0.2.0",
+  "description": "Fast geometry in geometry lookup for large GeoJSONs",
+  "main": "index.js",
+  "dependencies": {
+    "@turf/bbox": "^5.0.4",
+    "@turf/boolean-contains": "^5.0.4",
+    "geojson-geometries": "^1.1.1",
+    "install": "^0.10.2",
+    "npm": "^5.5.1",
+    "rbush": "^2.0.1"
+  },
+  "devDependencies": {
+    "@turf/helpers": "^5.0.4",
+    "ava": "*",
+    "codecov": "^3.0.0",
+    "nyc": "^11.3.0",
+    "xo": "*"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "xo && nyc ava --verbose",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonepri/geojson-geometries-lookup.git"
+  },
+  "author": [
+    {
+      "name": "Simone Primarosa",
+      "email": "simone.pri@hotmail.it"
+    }
+  ],
+  "keywords": [
+    "point-lookup",
+    "line-lookup",
+    "polygon-lookup",
+    "points-lookup",
+    "lines-lookup",
+    "polygons-lookup",
+    "geojson-geometries-lookup",
+    "geojsons-lookup",
+    "geojson",
+    "point",
+    "line",
+    "polygon",
+    "geojsons",
+    "points",
+    "lines",
+    "polygons",
+    "lookup",
+    "intersection",
+    "contains",
+    "contain",
+    "container",
+    "containers",
+    "contained"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonepri/geojson-geometries-lookup/issues"
+  },
+  "homepage": "https://github.com/simonepri/geojson-geometries-lookup#readme",
+  "xo": {
+    "space": true
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "index.js"
+  ]
+}
