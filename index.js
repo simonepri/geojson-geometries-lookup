@@ -67,7 +67,7 @@ class GeoJsonGeometriesLookup {
    * @param  {Object} geometry The geometry of type Point, LineString or Polygon
    *  for which to check if a container exists.
    * @param  {Object} [options] Optional options.
-   * @param  {boolean} options.limit If greater than 0 it will limit the number
+   * @param  {number} options.limit If greater than 0 it will limit the number
    *  of results on which iterate.
    * @param  {boolean} options.ignorePoints If true will ignore geometries of
    *  type Point.
@@ -121,7 +121,7 @@ class GeoJsonGeometriesLookup {
    * @param  {Object} geometry The geometry of type Point, LineString or Polygon
    *  for which to count containers.
    * @param  {Object} [options] Optional options.
-   * @param  {boolean} options.limit If greater than 0 it will limit the number
+   * @param  {number} options.limit If greater than 0 it will limit the number
    *  of results returned.
    * @param  {boolean} options.ignorePoints If true will ignore geometries of
    *  type Point.
@@ -171,7 +171,7 @@ class GeoJsonGeometriesLookup {
    * @param  {Object} geometry The geometry of type Point, LineString or Polygon
    *  for which to count containers.
    * @param  {Object} [options] Optional options.
-   * @param  {boolean} options.limit If greater than 0 it will stop counting
+   * @param  {number} options.limit If greater than 0 it will stop counting
    *   when this number of containers has been found.
    * @param  {boolean} options.ignorePoints If true will ignore geometries of
    *  type Point.

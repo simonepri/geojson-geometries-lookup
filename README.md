@@ -161,7 +161,7 @@ Iterate on each geometry that completely contains the geometry provided.
 | --- | --- | --- |
 | geometry | <code>Object</code> | The geometry of type Point, LineString or Polygon  for which to check if a container exists. |
 | [options] | <code>Object</code> | Optional options. |
-| options.limit | <code>boolean</code> | If greater than 0 it will limit the number  of results on which iterate. |
+| options.limit | <code>number</code> | If greater than 0 it will limit the number  of results on which iterate. |
 | options.ignorePoints | <code>boolean</code> | If true will ignore geometries of  type Point. |
 | options.ignoreLines | <code>boolean</code> | If true will ignore geometries of  type LineString. |
 | options.ignorePolygon | <code>boolean</code> | If true will ignore geometries of  type Polygon. |
@@ -181,7 +181,7 @@ Gets the geometries that completely contains the geometry provided.
 | --- | --- | --- |
 | geometry | <code>Object</code> | The geometry of type Point, LineString or Polygon  for which to count containers. |
 | [options] | <code>Object</code> | Optional options. |
-| options.limit | <code>boolean</code> | If greater than 0 it will limit the number  of results returned. |
+| options.limit | <code>number</code> | If greater than 0 it will limit the number  of results returned. |
 | options.ignorePoints | <code>boolean</code> | If true will ignore geometries of  type Point. |
 | options.ignoreLines | <code>boolean</code> | If true will ignore geometries of  type LineString. |
 | options.ignorePolygon | <code>boolean</code> | If true will ignore geometries of  type Polygon. |
@@ -221,7 +221,7 @@ Counts the number of geometries that completely contains the geometry provided.
 | --- | --- | --- |
 | geometry | <code>Object</code> | The geometry of type Point, LineString or Polygon  for which to count containers. |
 | [options] | <code>Object</code> | Optional options. |
-| options.limit | <code>boolean</code> | If greater than 0 it will stop counting   when this number of containers has been found. |
+| options.limit | <code>number</code> | If greater than 0 it will stop counting   when this number of containers has been found. |
 | options.ignorePoints | <code>boolean</code> | If true will ignore geometries of  type Point. |
 | options.ignoreLines | <code>boolean</code> | If true will ignore geometries of  type LineString. |
 | options.ignorePolygon | <code>boolean</code> | If true will ignore geometries of  type Polygon. |
