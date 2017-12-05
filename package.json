@@ -36,6 +36,7 @@
     }
   ],
   "keywords": [
+    "geojson-geometries-lookup",
     "point-lookup",
     "line-lookup",
     "polygon-lookup",
