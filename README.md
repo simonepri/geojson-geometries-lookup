@@ -15,7 +15,7 @@ With this package you can perform the following operations (and more) on a given
 $ npm install --save geojson-geometries-lookup
 ```
 
-## Showcase
+## Showcase
 Do you use geojson-geometries-lookup in your application? Please [open a Pull Request](https://github.com/simonepri/geojson-geometries-lookup/pulls) to include it here.  
 We would love to have it in our list:
 
