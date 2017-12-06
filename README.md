@@ -15,6 +15,13 @@ With this package you can perform the following operations (and more) on a given
 $ npm install --save geojson-geometries-lookup
 ```
 
+## Showcase
+Do you use geojson-geometries-lookup in your application? Please [open a Pull Request](https://github.com/simonepri/geojson-geometries-lookup/pulls) to include it here.  
+We would love to have it in our list:
+
+* [country-iso](https://github.com/simonepri/country-iso): 🗺 Get ISO 3166-1 alpha-3 country code for geographic coordinates.
+* [is-sea](https://github.com/simonepri/is-sea): 🌊 Check whether a geographic coordinate is in the sea or not on the earth.
+
 ## Usage
 ```javascript
 const GeoJsonGeometriesLookup = require('geojson-geometries-lookup');
