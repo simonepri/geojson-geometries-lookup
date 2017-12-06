@@ -3,12 +3,12 @@
 > ⚡️ Fast geometry in geometry lookup for large GeoJSONs.
 
 With this package you can perform the following operations (and more) on a given GeoJSON.
-* Given a Point get all the Points intersecting it in the GeoJSON inheriting properties.
-* Given a Point get all the Lines intersecting it in the GeoJSON inheriting properties.
-* Given a Point get all the Polygons containing it in the GeoJSON inheriting properties.
-* Given a Line get all the Lines containing it in the GeoJSON inheriting properties.
-* Given a Polygon get all the Lines containing it in the GeoJSON inheriting properties.
-* Given a Polygon get all the Polygons containing it in the GeoJSON inheriting properties.
+* Given a Point get all the Points in the GeoJSON that intersects it.
+* Given a Point get all the Lines in the GeoJSON that intersects it.
+* Given a Point get all the Polygons in the GeoJSON that contains it.
+* Given a Line get all the Lines in the GeoJSON that contains it.
+* Given a Line get all the Polygons in the GeoJSON that contains it.
+* Given a Polygon get all the Polygons in the GeoJSON that contains it.
 
 ## Install
 ```bash
