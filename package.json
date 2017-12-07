@@ -1,6 +1,6 @@
 {
   "name": "geojson-geometries-lookup",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Fast geometry in geometry lookup for large GeoJSONs",
   "main": "index.js",
   "dependencies": {
