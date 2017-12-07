@@ -139,6 +139,7 @@ glookup.getContainers(poly1, {ignorePoints: true, ignoreLines: true});
 ```
 
 ## API
+<a name="GeoJsonGeometriesLookup"></a>
 <a name="new_GeoJsonGeometriesLookup_new"></a>
 
 ### new GeoJsonGeometriesLookup(geoJson, [options])
