@@ -75,7 +75,7 @@ class GeoJsonGeometriesLookup {
    *  type LineString.
    * @param  {boolean} options.ignorePolygon If true will ignore geometries of
    *  type Polygon.
-   * @return {boolean}  The number of geometries that completely contains the
+   * @return {number}  The number of geometries that completely contains the
    *  geometry provided iterated. The interiors of both geometries must intersect and,
    *  the interior and boundary of the secondary (geometry b) must not intersect
    *  the exterior of the primary (geometry a).
