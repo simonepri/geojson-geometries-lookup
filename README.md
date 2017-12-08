@@ -237,7 +237,7 @@ Counts the number of geometries that completely contains the geometry provided.
 ## Authors
 * **Simone Primarosa** - [simonepri](https://github.com/simonepri)
 
-See also the list of [contributors](https://github.com/simonepri/world-country/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/simonepri/geojson-geometries-lookup/contributors) who participated in this project.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
