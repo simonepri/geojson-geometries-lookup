@@ -1,4 +1,6 @@
 # geojson-geometries-lookup
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/simonepri/geojson-geometries-lookup.svg)](https://greenkeeper.io/)
 [![Travis CI](https://travis-ci.org/simonepri/geojson-geometries-lookup.svg?branch=master)](https://travis-ci.org/simonepri/geojson-geometries-lookup) [![Codecov](https://img.shields.io/codecov/c/github/simonepri/geojson-geometries-lookup/master.svg)](https://codecov.io/gh/simonepri/geojson-geometries-lookup) [![npm](https://img.shields.io/npm/dm/geojson-geometries-lookup.svg)](https://www.npmjs.com/package/geojson-geometries-lookup) [![npm version](https://img.shields.io/npm/v/geojson-geometries-lookup.svg)](https://www.npmjs.com/package/geojson-geometries-lookup) [![npm dependencies](https://david-dm.org/simonepri/geojson-geometries-lookup.svg)](https://david-dm.org/simonepri/geojson-geometries-lookup) [![npm dev dependencies](https://david-dm.org/simonepri/geojson-geometries-lookup/dev-status.svg)](https://david-dm.org/simonepri/geojson-geometries-lookup#info=devDependencies)
 > ⚡️ Fast geometry in geometry lookup for large GeoJSONs.
 
