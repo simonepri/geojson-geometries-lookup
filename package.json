@@ -2,36 +2,16 @@
   "name": "geojson-geometries-lookup",
   "version": "0.2.5",
   "description": "Fast geometry in geometry lookup for large GeoJSONs",
-  "main": "index.js",
-  "dependencies": {
-    "@turf/bbox": "^5.0.4",
-    "@turf/boolean-contains": "^5.0.4",
-    "geojson-geometries": "^1.1.1",
-    "rbush": "^2.0.1"
+  "license": "MIT",
+  "homepage": "https://github.com/simonepri/geojson-geometries-lookup#readme",
+  "repository": "github:simonepri/geojson-geometries-lookup",
+  "bugs": {
+    "url": "https://github.com/simonepri/geojson-geometries-lookup/issues",
+    "email": "simonepri@outlook.com"
   },
-  "devDependencies": {
-    "@turf/helpers": "^5.0.4",
-    "ava": "*",
-    "codecov": "^3.0.0",
-    "nyc": "^11.3.0",
-    "xo": "*"
-  },
-  "engines": {
-    "node": ">=6"
-  },
-  "scripts": {
-    "test": "xo && nyc ava --verbose",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simonepri/geojson-geometries-lookup.git"
-  },
-  "author": [
-    {
-      "name": "Simone Primarosa",
-      "email": "simone.pri@hotmail.it"
-    }
+  "author": "Simone Primarosa <simonepri@outlook.com> (https://simoneprimarosa.com)",
+  "contributors": [
+    "Simone Primarosa <simonepri@outlook.com> (https://simoneprimarosa.com)"
   ],
   "keywords": [
     "geojson-geometries-lookup",
@@ -59,18 +39,46 @@
     "containers",
     "contained"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/simonepri/geojson-geometries-lookup/issues"
-  },
-  "homepage": "https://github.com/simonepri/geojson-geometries-lookup#readme",
-  "xo": {
-    "space": true
-  },
+  "main": "index.js",
   "files": [
-    "LICENSE",
-    "README.md",
-    "package.json",
     "index.js"
-  ]
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "xo &&nyc ava",
+    "release": "np",
+    "update": "npm-check -u"
+  },
+  "dependencies": {
+    "@turf/bbox": "^5.0.4",
+    "@turf/boolean-contains": "^5.0.4",
+    "geojson-geometries": "^1.1.1",
+    "rbush": "^2.0.1"
+  },
+  "devDependencies": {
+    "@turf/helpers": "^5.0.4",
+    "ava": "*",
+    "np": "*",
+    "npm-check": "*",
+    "nyc": "*",
+    "xo": "*"
+  },
+  "ava": {
+    "verbose": true
+  },
+  "nyc": {
+    "reporter": [
+      "lcovonly",
+      "text"
+    ]
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "rules": {
+      "prefer-destructuring": "off"
+    }
+  }
 }
