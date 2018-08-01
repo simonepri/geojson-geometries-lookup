@@ -1,10 +1,6 @@
 import test from 'ava';
 
-import {
-  point,
-  lineString,
-  featureCollection
-} from '@turf/helpers';
+import {point, lineString, featureCollection} from '@turf/helpers';
 
 import M from '..';
 
@@ -38,7 +34,11 @@ test('GeoJsonGeometriesLookup.search() searches correctly.', t => {
       t.is(res.features.length, 0, 'Failed at: ' + id);
     } else {
       t.is(res.features.length, 1, 'Failed at: ' + id);
-      t.deepEqual(res.features[0].properties, tc.properties, 'Failed at: ' + id);
+      t.deepEqual(
+        res.features[0].properties,
+        tc.properties,
+        'Failed at: ' + id
+      );
     }
   });
 });
@@ -66,7 +66,11 @@ test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
     t.is(res.features.length, tc.len, 'Failed at: ' + id);
     if (tc.len > 0) {
       for (let i = 0; i < tc.len; i++) {
-        t.deepEqual(res.features[i].properties, tc.p.properties.list[i], 'Failed at: ' + id + ' result: ' + i);
+        t.deepEqual(
+          res.features[i].properties,
+          tc.p.properties.list[i],
+          'Failed at: ' + id + ' result: ' + i
+        );
       }
     }
   });

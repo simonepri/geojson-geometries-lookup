@@ -1,9 +1,6 @@
 import test from 'ava';
 
-import {
-  lineString,
-  featureCollection
-} from '@turf/helpers';
+import {lineString, featureCollection} from '@turf/helpers';
 
 import M from '..';
 
@@ -37,7 +34,11 @@ test('GeoJsonGeometriesLookup.search() searches correctly.', t => {
       t.is(res.features.length, 0, 'Failed at: ' + id);
     } else {
       t.is(res.features.length, 1, 'Failed at: ' + id);
-      t.deepEqual(res.features[0].properties, tc.properties, 'Failed at: ' + id);
+      t.deepEqual(
+        res.features[0].properties,
+        tc.properties,
+        'Failed at: ' + id
+      );
     }
   });
 });
@@ -56,7 +57,11 @@ test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
   const glookup = new M(geojson);
 
   const testCases = [
-    {p: lineString([[3.5, 3], [3.5, 3]], {list: [{id: 1}, {id: 3}]}), lim: 0, len: 2},
+    {
+      p: lineString([[3.5, 3], [3.5, 3]], {list: [{id: 1}, {id: 3}]}),
+      lim: 0,
+      len: 2
+    },
     {p: lineString([[3.5, 3], [3.5, 3]], {list: [{id: 1}]}), lim: 1, len: 1},
     {p: lineString([[10.5, 10], [10.5, 10]]), lim: 0, len: 0}
   ];
@@ -65,7 +70,11 @@ test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
     t.is(res.features.length, tc.len, 'Failed at: ' + id);
     if (tc.len > 0) {
       for (let i = 0; i < tc.len; i++) {
-        t.deepEqual(res.features[i].properties, tc.p.properties.list[i], 'Failed at: ' + id + ' result: ' + i);
+        t.deepEqual(
+          res.features[i].properties,
+          tc.p.properties.list[i],
+          'Failed at: ' + id + ' result: ' + i
+        );
       }
     }
   });

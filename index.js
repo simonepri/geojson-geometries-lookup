@@ -13,10 +13,16 @@ const FEATURE_COLLECTION = 'featureCollection';
 
 function getGeometryDimension(geometry) {
   switch (geometry.type) {
-    case POINT: return 0;
-    case LINE_STRING: return 1;
-    case POLYGON: return 2;
-    default: throw new TypeError('Unsupported GeoJSON type. Use one of: Point, LineString, Polygon');
+    case POINT:
+      return 0;
+    case LINE_STRING:
+      return 1;
+    case POLYGON:
+      return 2;
+    default:
+      throw new TypeError(
+        'Unsupported GeoJSON type. Use one of: Point, LineString, Polygon'
+      );
   }
 }
 
@@ -55,7 +61,13 @@ class GeoJsonGeometriesLookup {
 
         for (let i = 0, len = geoms.length; i < len; i++) {
           const bbox = tbbox(geoms[i]);
-          bboxs[i] = {minX: bbox[0], minY: bbox[1], maxX: bbox[2], maxY: bbox[3], id: i};
+          bboxs[i] = {
+            minX: bbox[0],
+            minY: bbox[1],
+            maxX: bbox[2],
+            maxY: bbox[3],
+            id: i
+          };
         }
         lookup.load(bboxs);
       }
@@ -75,6 +87,7 @@ class GeoJsonGeometriesLookup {
    *  type LineString.
    * @param  {boolean} options.ignorePolygon If true will ignore geometries of
    *  type Polygon.
+   * @param {Function} func The function that will be called for each element.
    * @return {number}  The number of geometries that completely contains the
    *  geometry provided iterated. The interiors of both geometries must intersect and,
    *  the interior and boundary of the secondary (geometry b) must not intersect
@@ -86,7 +99,11 @@ class GeoJsonGeometriesLookup {
 
     let count = 0;
     const size = getGeometryDimension(geometry);
-    const ignores = [options.ignorePoints, options.ignoreLines, options.ignorePolygons];
+    const ignores = [
+      options.ignorePoints,
+      options.ignoreLines,
+      options.ignorePolygons
+    ];
 
     for (let d = size; d < 3; d++) {
       if (ignores[d] === true) {
@@ -99,7 +116,12 @@ class GeoJsonGeometriesLookup {
       }
 
       const bbox = tbbox(geometry);
-      const bboxs = dim.lookup.search({minX: bbox[0], minY: bbox[1], maxX: bbox[2], maxY: bbox[3]});
+      const bboxs = dim.lookup.search({
+        minX: bbox[0],
+        minY: bbox[1],
+        maxX: bbox[2],
+        maxY: bbox[3]
+      });
 
       for (let i = 0, len = bboxs.length; i < len; i++) {
         const geom = dim.list[bboxs[i].id];

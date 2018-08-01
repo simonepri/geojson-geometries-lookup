@@ -1,9 +1,6 @@
 import test from 'ava';
 
-import {
-  polygon,
-  featureCollection
-} from '@turf/helpers';
+import {polygon, featureCollection} from '@turf/helpers';
 
 import M from '..';
 
@@ -38,24 +35,37 @@ test('GeoJsonGeometriesLookup.search() searches correctly.', t => {
       t.is(res.features.length, 0, 'Failed at: ' + id);
     } else {
       t.is(res.features.length, 1, 'Failed at: ' + id);
-      t.deepEqual(res.features[0].properties, tc.properties, 'Failed at: ' + id);
+      t.deepEqual(
+        res.features[0].properties,
+        tc.properties,
+        'Failed at: ' + id
+      );
     }
   });
 });
 
 test('GeoJsonGeometriesLookup.search() handles polygons with multiple rings.', t => {
   const geojson = featureCollection([
-    polygon([
-      [[1, 12], [0, 0], [15, -1], [15, 13], [1, 12]],
-      [[2, 11], [1, 2], [6, 0], [14, 0], [14, 11], [2, 11]]
-    ], {id: 0}),
-    polygon([
-      [[1, 2], [7, 1], [8, 9], [3, 7], [1, 2]],
-      [[3, 3], [6, 3], [6, 7], [4, 6], [3, 3]]  // Hole
-    ], {id: 1}),
-    polygon([
-      [[3, 3], [6, 3], [6, 7], [4, 6], [3, 3]]  // Hole
-    ], {id: 2})
+    polygon(
+      [
+        [[1, 12], [0, 0], [15, -1], [15, 13], [1, 12]],
+        [[2, 11], [1, 2], [6, 0], [14, 0], [14, 11], [2, 11]]
+      ],
+      {id: 0}
+    ),
+    polygon(
+      [
+        [[1, 2], [7, 1], [8, 9], [3, 7], [1, 2]],
+        [[3, 3], [6, 3], [6, 7], [4, 6], [3, 3]] // Hole
+      ],
+      {id: 1}
+    ),
+    polygon(
+      [
+        [[3, 3], [6, 3], [6, 7], [4, 6], [3, 3]] // Hole
+      ],
+      {id: 2}
+    )
   ]);
 
   const glookup = new M(geojson);
@@ -72,7 +82,11 @@ test('GeoJsonGeometriesLookup.search() handles polygons with multiple rings.', t
       t.is(res.features.length, 0, 'Failed at: ' + id);
     } else {
       t.is(res.features.length, 1, 'Failed at: ' + id);
-      t.deepEqual(res.features[0].properties, tc.properties, 'Failed at: ' + id);
+      t.deepEqual(
+        res.features[0].properties,
+        tc.properties,
+        'Failed at: ' + id
+      );
     }
   });
 });
@@ -87,8 +101,18 @@ test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
   const glookup = new M(geojson);
 
   const testCases = [
-    {p: polygon([[[3, 3], [3, 3], [3, 3], [3, 3]]], {list: [{id: 1}, {id: 3}]}), lim: 0, len: 2},
-    {p: polygon([[[3, 3], [3, 3], [3, 3], [3, 3]]], {list: [{id: 1}]}), lim: 1, len: 1},
+    {
+      p: polygon([[[3, 3], [3, 3], [3, 3], [3, 3]]], {
+        list: [{id: 1}, {id: 3}]
+      }),
+      lim: 0,
+      len: 2
+    },
+    {
+      p: polygon([[[3, 3], [3, 3], [3, 3], [3, 3]]], {list: [{id: 1}]}),
+      lim: 1,
+      len: 1
+    },
     {p: polygon([[[10, 10], [10, 10], [10, 10], [10, 10]]]), lim: 0, len: 0}
   ];
   testCases.forEach((tc, id) => {
@@ -96,7 +120,11 @@ test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
     t.is(res.features.length, tc.len, 'Failed at: ' + id);
     if (tc.len > 0) {
       for (let i = 0; i < tc.len; i++) {
-        t.deepEqual(res.features[i].properties, tc.p.properties.list[i], 'Failed at: ' + id + ' result: ' + i);
+        t.deepEqual(
+          res.features[i].properties,
+          tc.p.properties.list[i],
+          'Failed at: ' + id + ' result: ' + i
+        );
       }
     }
   });
