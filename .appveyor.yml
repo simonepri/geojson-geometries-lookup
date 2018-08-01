@@ -1,19 +1,20 @@
-sudo: false
-language: node_js
-node_js:
-  - '10'
-  - '8'
-  - '6'
-os:
-  - linux
-  - osx
+build: off
+version: '{build}'
+environment:
+  matrix:
+    - nodejs_version: '10'
+    - nodejs_version: '8'
+    - nodejs_version: '6'
+platform:
+  - x86
+  - x64
 cache:
-  directories:
   - node_modules
 install:
+  - ps: Install-Product node $env:nodejs_version
   - npm i -g npx
   - npm install
-script:
+test_script:
   - node --version
   - npm --version
   - npx --version
@@ -21,4 +22,4 @@ script:
   - node -e "console.log('CPU:', require('os').cpus().length, 'x', require('os').cpus()[0].model)"
   - npm test
 after_test:
-  - npx codecov
+- npx codecov
