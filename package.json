@@ -7,8 +7,6 @@
     "@turf/bbox": "^5.0.4",
     "@turf/boolean-contains": "^5.0.4",
     "geojson-geometries": "^1.1.1",
-    "install": "^0.10.2",
-    "npm": "^5.5.1",
     "rbush": "^2.0.1"
   },
   "devDependencies": {
