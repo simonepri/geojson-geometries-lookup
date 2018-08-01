@@ -1,8 +1,9 @@
 'use strict';
 
 const rbush = require('rbush');
-const tbbox = require('@turf/bbox');
-const tcontains = require('@turf/boolean-contains');
+const tbbox = require('@turf/bbox').default;
+
+const tcontains = require('@turf/boolean-contains').default;
 const GeoJsonGeometries = require('geojson-geometries');
 
 const POINT = 'Point';
