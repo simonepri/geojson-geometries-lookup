@@ -1,6 +1,73 @@
-# geojson-geometries-lookup
-[![Travis CI](https://travis-ci.org/simonepri/geojson-geometries-lookup.svg?branch=master)](https://travis-ci.org/simonepri/geojson-geometries-lookup) [![Codecov](https://img.shields.io/codecov/c/github/simonepri/geojson-geometries-lookup/master.svg)](https://codecov.io/gh/simonepri/geojson-geometries-lookup) [![npm](https://img.shields.io/npm/dm/geojson-geometries-lookup.svg)](https://www.npmjs.com/package/geojson-geometries-lookup) [![npm version](https://img.shields.io/npm/v/geojson-geometries-lookup.svg)](https://www.npmjs.com/package/geojson-geometries-lookup) [![npm dependencies](https://david-dm.org/simonepri/geojson-geometries-lookup.svg)](https://david-dm.org/simonepri/geojson-geometries-lookup) [![npm dev dependencies](https://david-dm.org/simonepri/geojson-geometries-lookup/dev-status.svg)](https://david-dm.org/simonepri/geojson-geometries-lookup#info=devDependencies)
-> ⚡️ Fast geometry in geometry lookup for large GeoJSONs.
+<h1 align="center">
+  <b>geojson-geometries-lookup</b>
+</h1>
+<p align="center">
+  <!-- CI - TravisCI -->
+  <a href="https://travis-ci.com/simonepri/geojson-geometries-lookup">
+    <img src="https://img.shields.io/travis/com/simonepri/geojson-geometries-lookup/master.svg?label=MacOS%20%26%20Linux" alt="Mac/Linux Build Status" />
+  </a>
+  <!-- CI - AppVeyor -->
+  <a href="https://ci.appveyor.com/project/simonepri/geojson-geometries-lookup">
+    <img src="https://img.shields.io/appveyor/ci/simonepri/geojson-geometries-lookup/master.svg?label=Windows" alt="Windows Build status" />
+  </a>
+  <!-- Coverage - Codecov -->
+  <a href="https://codecov.io/gh/simonepri/geojson-geometries-lookup">
+    <img src="https://img.shields.io/codecov/c/github/simonepri/geojson-geometries-lookup/master.svg" alt="Codecov Coverage report" />
+  </a>
+  <!-- DM - Snyk -->
+  <a href="https://snyk.io/test/github/simonepri/geojson-geometries-lookup?targetFile=package.json">
+    <img src="https://snyk.io/test/github/simonepri/geojson-geometries-lookup/badge.svg?targetFile=package.json" alt="Known Vulnerabilities" />
+  </a>
+  <!-- DM - David -->
+  <a href="https://david-dm.org/simonepri/geojson-geometries-lookup">
+    <img src="https://david-dm.org/simonepri/geojson-geometries-lookup/status.svg" alt="Dependency Status" />
+  </a>
+
+  <br/>
+
+  <!-- Code Style - XO-Prettier -->
+  <a href="https://github.com/xojs/xo">
+    <img src="https://img.shields.io/badge/code_style-XO+Prettier-5ed9c7.svg" alt="XO Code Style used" />
+  </a>
+  <!-- Test Runner - AVA -->
+  <a href="https://github.com/avajs/ava">
+    <img src="https://img.shields.io/badge/test_runner-AVA-fb3170.svg" alt="AVA Test Runner used" />
+  </a>
+  <!-- Test Coverage - Istanbul -->
+  <a href="https://github.com/istanbuljs/nyc">
+    <img src="https://img.shields.io/badge/test_coverage-NYC-fec606.svg" alt="Istanbul Test Coverage used" />
+  </a>
+  <!-- Init - ni -->
+  <a href="https://github.com/simonepri/ni">
+    <img src="https://img.shields.io/badge/initialized_with-ni-e74c3c.svg" alt="NI Scaffolding System used" />
+  </a>
+  <!-- Release - np -->
+  <a href="https://github.com/sindresorhus/np">
+    <img src="https://img.shields.io/badge/released_with-np-6c8784.svg" alt="NP Release System used" />
+  </a>
+
+  <br/>
+
+  <!-- Version - npm -->
+  <a href="https://www.npmjs.com/package/geojson-geometries-lookup">
+    <img src="https://img.shields.io/npm/v/geojson-geometries-lookup.svg" alt="Latest version on npm" />
+  </a>
+  <!-- License - MIT -->
+  <a href="https://github.com/simonepri/geojson-geometries-lookup/tree/master/license">
+    <img src="https://img.shields.io/github/license/simonepri/geojson-geometries-lookup.svg" alt="Project license" />
+  </a>
+</p>
+<p align="center">
+  ⚡️ Fast geometry in geometry lookup for large GeoJSONs.
+
+  <br/>
+
+  <sub>
+    Coded with ❤️ by <a href="#authors">Simone Primarosa</a>.
+  </sub>
+</p>
+
+## Synopsis
 
 With this package you can perform the following operations (and more) on a given GeoJSON.
 * Given a Point get all the Points in the GeoJSON that intersects it.
@@ -16,7 +83,7 @@ $ npm install --save geojson-geometries-lookup
 ```
 
 ## Showcase
-Do you use geojson-geometries-lookup in your application? Please [open a Pull Request](https://github.com/simonepri/geojson-geometries-lookup/pulls) to include it here.  
+Do you use geojson-geometries-lookup in your application? Please [open a Pull Request][new-pr] to include it here.  
 We would love to have it in our list:
 
 * [country-iso](https://github.com/simonepri/country-iso): 🗺 Get ISO 3166-1 alpha-3 country code for geographic coordinates.
@@ -234,10 +301,25 @@ Counts the number of geometries that completely contains the geometry provided.
 | options.ignoreLines | <code>boolean</code> | If true will ignore geometries of  type LineString. |
 | options.ignorePolygon | <code>boolean</code> | If true will ignore geometries of  type Polygon. |
 
-## Authors
-* **Simone Primarosa** - [simonepri](https://github.com/simonepri)
+## Contributing
+Contributions are REALLY welcome and if you find a security flaw in this code,
+PLEASE [report it][new-issue].  
 
-See also the list of [contributors](https://github.com/simonepri/geojson-geometries-lookup/contributors) who participated in this project.
+## Authors
+- **Simone Primarosa** - *Github* ([@simonepri][github:simonepri]) • *Twitter* ([@simoneprimarosa][twitter:simoneprimarosa])
+
+See also the list of [contributors][contributors] who participated in this project.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [license][license] file for details.
+
+<!-- Links -->
+[start]: https://github.com/simonepri/geojson-geometries-lookup#start-of-content
+[new-issue]: https://github.com/simonepri/geojson-geometries-lookup/issues/new
+[new-pr]: https://github.com/simonepri/geojson-geometries-lookup/pulls/compare
+[contributors]: https://github.com/simonepri/geojson-geometries-lookup/contributors
+
+[license]: https://github.com/simonepri/geojson-geometries-lookup/tree/master/license
+
+[github:simonepri]: https://github.com/simonepri
+[twitter:simoneprimarosa]: http://twitter.com/intent/user?screen_name=simoneprimarosa
