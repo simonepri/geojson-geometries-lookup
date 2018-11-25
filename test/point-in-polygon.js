@@ -8,7 +8,7 @@ test('exports a constructor.', t => {
   t.is(typeof M, 'function');
 });
 
-test('GeoJsonGeometriesLookup.search() searches correctly.', t => {
+test('GeoJsonGeometriesLookup.getContainers() searches correctly.', t => {
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
@@ -44,7 +44,7 @@ test('GeoJsonGeometriesLookup.search() searches correctly.', t => {
   });
 });
 
-test('GeoJsonGeometriesLookup.search() handles polygons with multiple rings.', t => {
+test('GeoJsonGeometriesLookup.getContainers() handles polygons with multiple rings.', t => {
   const geojson = featureCollection([
     polygon(
       [
@@ -91,7 +91,7 @@ test('GeoJsonGeometriesLookup.search() handles polygons with multiple rings.', t
   });
 });
 
-test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
+test('GeoJsonGeometriesLookup.getContainers() respects limit argument.', t => {
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
@@ -120,7 +120,7 @@ test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
   });
 });
 
-test('GeoJsonGeometriesLookup.collides() works correctly.', t => {
+test('GeoJsonGeometriesLookup.hasContainers() works correctly.', t => {
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),

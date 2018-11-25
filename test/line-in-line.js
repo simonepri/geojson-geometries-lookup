@@ -8,7 +8,7 @@ test('exports a constructor.', t => {
   t.is(typeof M, 'function');
 });
 
-test('GeoJsonGeometriesLookup.search() searches correctly.', t => {
+test('GeoJsonGeometriesLookup.getContainers() searches correctly.', t => {
   const geojson = featureCollection([
     lineString([[4, 6], [5, 6]], {id: 1}),
     lineString([[4, 1], [5, 1]], {id: 2}),
@@ -43,7 +43,7 @@ test('GeoJsonGeometriesLookup.search() searches correctly.', t => {
   });
 });
 
-test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
+test('GeoJsonGeometriesLookup.getContainers() respects limit argument.', t => {
   const geojson = featureCollection([
     lineString([[3, 3], [4, 3]], {id: 1}),
     lineString([[10, 9], [11, 9]], {id: 2}),
@@ -80,7 +80,7 @@ test('GeoJsonGeometriesLookup.search() respects limit argument.', t => {
   });
 });
 
-test('GeoJsonGeometriesLookup.collides() works correctly.', t => {
+test('GeoJsonGeometriesLookup.hasContainers() works correctly.', t => {
   const geojson = featureCollection([
     lineString([[4, 6], [5, 6]], {id: 1}),
     lineString([[4, 1], [5, 1]], {id: 2}),
