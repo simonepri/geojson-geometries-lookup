@@ -70,6 +70,7 @@ class GeoJsonGeometriesLookup {
             id: i
           };
         }
+
         lookup.load(bboxs);
       }
     }
@@ -129,6 +130,7 @@ class GeoJsonGeometriesLookup {
         if (!tcontains(geom, geometry)) {
           continue;
         }
+
         func(geom, count);
         count++;
         if (options.limit > 0 && options.limit === count) {
@@ -136,6 +138,7 @@ class GeoJsonGeometriesLookup {
         }
       }
     }
+
     return count;
   }
 
