@@ -95,7 +95,7 @@ class GeoJsonGeometriesLookup {
    *  the interior and boundary of the secondary (geometry b) must not intersect
    *  the exterior of the primary (geometry a).
    */
-  forEachCotainer(geometry, options, func) {
+  forEachContainer(geometry, options, func) {
     options = typeof options === 'object' ? options : {};
     func = typeof func === 'function' ? func : () => {};
 
@@ -164,7 +164,7 @@ class GeoJsonGeometriesLookup {
     options = typeof options === 'object' ? options : {};
 
     const results = [];
-    this.forEachCotainer(geometry, options, geom => results.push(geom));
+    this.forEachContainer(geometry, options, geom => results.push(geom));
     return {type: FEATURE_COLLECTION, features: results};
   }
 
@@ -189,7 +189,7 @@ class GeoJsonGeometriesLookup {
     options = typeof options === 'object' ? options : {};
 
     options.limit = 1;
-    return this.forEachCotainer(geometry, options) === 1;
+    return this.forEachContainer(geometry, options) === 1;
   }
 
   /**
@@ -213,7 +213,7 @@ class GeoJsonGeometriesLookup {
   countContainers(geometry, options) {
     options = typeof options === 'object' ? options : {};
 
-    return this.forEachCotainer(geometry, options);
+    return this.forEachContainer(geometry, options);
   }
 }
 
