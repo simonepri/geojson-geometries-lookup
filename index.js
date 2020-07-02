@@ -1,6 +1,6 @@
 'use strict';
 
-const rbush = require('rbush');
+const RBush = require('rbush');
 const tbbox = require('@turf/bbox').default;
 
 const tcontains = require('@turf/boolean-contains').default;
@@ -54,7 +54,7 @@ class GeoJsonGeometriesLookup {
       const dim = this.D[d];
       if (dim.list.length > 0) {
         dim.bboxs = new Array(dim.list.length);
-        dim.lookup = rbush();
+        dim.lookup = new RBush();
 
         const geoms = dim.list;
         const bboxs = dim.bboxs;
