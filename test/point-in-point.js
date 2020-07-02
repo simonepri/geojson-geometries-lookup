@@ -1,8 +1,8 @@
-import test from 'ava';
+const test = require('ava');
 
-import {point, featureCollection} from '@turf/helpers';
+const {point, featureCollection} = require('@turf/helpers');
 
-import M from '..';
+const M = require('..');
 
 test('exports a constructor.', t => {
   t.is(typeof M, 'function');

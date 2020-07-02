@@ -16,7 +16,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: 6
+          node-version: 10
       - name: Install dev dependencies
         run: |
           npm install

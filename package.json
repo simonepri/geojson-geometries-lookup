@@ -44,7 +44,7 @@
     "index.js"
   ],
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   },
   "scripts": {
     "lint": "xo",
@@ -60,9 +60,9 @@
   },
   "devDependencies": {
     "@turf/helpers": "^6.1.4",
-    "ava": "^1.4.1",
-    "nyc": "^14.1.1",
-    "xo": "~0.24.0"
+    "ava": "^3.9.0",
+    "nyc": "^15.1.0",
+    "xo": "~0.27.2"
   },
   "ava": {
     "verbose": true
