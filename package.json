@@ -55,7 +55,7 @@
   "dependencies": {
     "@turf/bbox": "^6.0.1",
     "@turf/boolean-contains": "^6.0.1",
-    "geojson-geometries": "^1.1.1",
+    "geojson-geometries": "^2.0.0",
     "rbush": "^3.0.1"
   },
   "devDependencies": {
