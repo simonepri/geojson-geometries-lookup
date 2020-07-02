@@ -236,9 +236,9 @@ Create an instance of the GeoJSON lookup class.
 | options.ignoreLines | <code>boolean</code> | If true the extractor will ignore  geometries of type LineString. |
 | options.ignorePolygon | <code>boolean</code> | If true the extractor will ignore  geometries of type Polygon. |
 
-<a name="GeoJsonGeometriesLookup+forEachCotainer"></a>
+<a name="GeoJsonGeometriesLookup+forEachContainer"></a>
 
-### geoJsonGeometriesLookup.forEachCotainer(geometry, [options]) ⇒ <code>number</code>
+### geoJsonGeometriesLookup.forEachContainer(geometry, [options]) ⇒ <code>number</code>
 Iterate on each geometry that completely contains the geometry provided.
 
 **Kind**: instance method of [<code>GeoJsonGeometriesLookup</code>](#GeoJsonGeometriesLookup)  
