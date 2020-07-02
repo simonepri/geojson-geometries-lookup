@@ -9,11 +9,13 @@ test('exports a constructor.', t => {
 });
 
 test('GeoJsonGeometriesLookup.getContainers() searches correctly.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
     polygon([[[8, 5], [10, 6], [9, 7], [8, 5]]], {id: 3})
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 
@@ -45,6 +47,7 @@ test('GeoJsonGeometriesLookup.getContainers() searches correctly.', t => {
 });
 
 test('GeoJsonGeometriesLookup.getContainers() handles polygons with multiple rings.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon(
       [
@@ -67,6 +70,7 @@ test('GeoJsonGeometriesLookup.getContainers() handles polygons with multiple rin
       {id: 2}
     )
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 
@@ -92,11 +96,13 @@ test('GeoJsonGeometriesLookup.getContainers() handles polygons with multiple rin
 });
 
 test('GeoJsonGeometriesLookup.getContainers() respects limit argument.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
     polygon([[[1, 0], [10, 2], [2, 7], [1, 0]]], {id: 3})
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 
@@ -121,12 +127,14 @@ test('GeoJsonGeometriesLookup.getContainers() respects limit argument.', t => {
 });
 
 test('GeoJsonGeometriesLookup.hasContainers() works correctly.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
     polygon([[[8, 5], [10, 6], [9, 7], [8, 5]]], {id: 3}),
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 4})
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 

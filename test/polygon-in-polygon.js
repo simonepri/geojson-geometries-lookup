@@ -9,14 +9,17 @@ test('exports a constructor.', t => {
 });
 
 test('GeoJsonGeometriesLookup.featureCollection() searches correctly.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
     polygon([[[8, 5], [10, 6], [9, 7], [8, 5]]], {id: 3})
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 
+  /* eslint-disable prettier/prettier */
   const testCases = [
     polygon([[[1, 5], [1, 5], [1, 5], [1, 5]]]),
     polygon([[[6, 3], [6, 3], [6, 3], [6, 3]]]),
@@ -29,6 +32,8 @@ test('GeoJsonGeometriesLookup.featureCollection() searches correctly.', t => {
     polygon([[[10, 11], [10, 11], [10, 11], [10, 11]]]),
     polygon([[[3, 3.9], [3, 3.9], [3, 3.9], [3, 3.9]]], {id: 1})
   ];
+  /* eslint-enable prettier/prettier */
+
   testCases.forEach((tc, id) => {
     const res = glookup.getContainers(tc.geometry);
     if (Object.keys(tc.properties).length === 0) {
@@ -45,6 +50,7 @@ test('GeoJsonGeometriesLookup.featureCollection() searches correctly.', t => {
 });
 
 test('GeoJsonGeometriesLookup.featureCollection() handles polygons with multiple rings.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon(
       [
@@ -67,15 +73,19 @@ test('GeoJsonGeometriesLookup.featureCollection() handles polygons with multiple
       {id: 2}
     )
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 
+  /* eslint-disable prettier/prettier */
   const testCases = [
     polygon([[[10, 12], [10, 12], [10, 12], [10, 12]]], {id: 0}),
     polygon([[[5, 4], [5, 4], [5, 4], [5, 4]]], {id: 2}),
     polygon([[[2, 3], [2, 3], [2, 3], [2, 3]]], {id: 1}),
     polygon([[[13, 4], [13, 4], [13, 4], [13, 4]]])
   ];
+  /* eslint-enable prettier/prettier */
+
   testCases.forEach((tc, id) => {
     const res = glookup.getContainers(tc.geometry);
     if (Object.keys(tc.properties).length === 0) {
@@ -92,14 +102,17 @@ test('GeoJsonGeometriesLookup.featureCollection() handles polygons with multiple
 });
 
 test('GeoJsonGeometriesLookup.featureCollection() respects limit argument.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
     polygon([[[1, 0], [10, 2], [2, 7], [1, 0]]], {id: 3})
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 
+  /* eslint-disable prettier/prettier */
   const testCases = [
     {
       p: polygon([[[3, 3], [3, 3], [3, 3], [3, 3]]], {
@@ -115,6 +128,8 @@ test('GeoJsonGeometriesLookup.featureCollection() respects limit argument.', t =
     },
     {p: polygon([[[10, 10], [10, 10], [10, 10], [10, 10]]]), lim: 0, len: 0}
   ];
+  /* eslint-enable prettier/prettier */
+
   testCases.forEach((tc, id) => {
     const res = glookup.getContainers(tc.p.geometry, {limit: tc.lim});
     t.is(res.features.length, tc.len, 'Failed at: ' + id);
@@ -131,15 +146,18 @@ test('GeoJsonGeometriesLookup.featureCollection() respects limit argument.', t =
 });
 
 test('GeoJsonGeometriesLookup.hasContainers() works correctly.', t => {
+  /* eslint-disable prettier/prettier */
   const geojson = featureCollection([
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 1}),
     polygon([[[3, 0], [7, 2], [4, 4], [3, 0]]], {id: 2}),
     polygon([[[8, 5], [10, 6], [9, 7], [8, 5]]], {id: 3}),
     polygon([[[2, 2], [6, 4], [4, 7], [2, 2]]], {id: 4})
   ]);
+  /* eslint-enable prettier/prettier */
 
   const glookup = new M(geojson);
 
+  /* eslint-disable prettier/prettier */
   const testCases = [
     {p: polygon([[[1, 5], [1, 5], [1, 5], [1, 5]]]), s: false},
     {p: polygon([[[6, 3], [6, 3], [6, 3], [6, 3]]]), s: false},
@@ -152,6 +170,8 @@ test('GeoJsonGeometriesLookup.hasContainers() works correctly.', t => {
     {p: polygon([[[10, 11], [10, 11], [10, 11], [10, 11]]]), s: false},
     {p: polygon([[[3, 3.9], [3, 3.9], [3, 3.9], [3, 3.9]]]), s: true}
   ];
+  /* eslint-enable prettier/prettier */
+
   testCases.forEach((tc, id) => {
     const res = glookup.hasContainers(tc.p.geometry);
     t.is(res, tc.s, 'Failed at: ' + id);

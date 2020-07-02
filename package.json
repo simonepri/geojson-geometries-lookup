@@ -47,9 +47,10 @@
     "node": ">=6"
   },
   "scripts": {
-    "test": "xo &&nyc ava",
-    "release": "np",
-    "update": "npm-check -u"
+    "lint": "xo",
+    "test": "nyc ava",
+    "release": "npx np",
+    "update": "npx npm-check -u"
   },
   "dependencies": {
     "@turf/bbox": "^6.0.1",
@@ -59,11 +60,9 @@
   },
   "devDependencies": {
     "@turf/helpers": "^6.1.4",
-    "ava": "*",
-    "np": "*",
-    "npm-check": "*",
-    "nyc": "*",
-    "xo": "*"
+    "ava": "^1.4.1",
+    "nyc": "^14.1.1",
+    "xo": "~0.24.0"
   },
   "ava": {
     "verbose": true
