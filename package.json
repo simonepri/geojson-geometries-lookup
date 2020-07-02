@@ -1,6 +1,6 @@
 {
   "name": "geojson-geometries-lookup",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Fast geometry in geometry lookup for large GeoJSONs",
   "license": "MIT",
   "homepage": "https://github.com/simonepri/geojson-geometries-lookup#readme",
