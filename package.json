@@ -42,7 +42,8 @@
   "main": "index.js",
   "browser": "browser.js",
   "files": [
-    "index.js"
+    "index.js",
+    "browser.js"
   ],
   "engines": {
     "node": ">=10"
@@ -51,7 +52,9 @@
     "lint": "xo",
     "test": "nyc ava",
     "release": "npx np",
-    "update": "npx npm-check -u"
+    "update": "npx npm-check -u",
+    "prerelease": "rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.js"
   },
   "dependencies": {
     "@turf/bbox": "^6.0.1",

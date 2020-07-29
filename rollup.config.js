@@ -1,7 +1,7 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import strip from '@rollup/plugin-strip';
-import { terser } from "rollup-plugin-terser";
+import {terser} from 'rollup-plugin-terser';
 
 export default {
   input: 'index.js',
@@ -10,5 +10,5 @@ export default {
     format: 'iife',
     name: 'GeoJsonGeometriesLookup'
   },
-  plugins: [nodeResolve({ browser: true }), commonjs(), strip(), terser()]
+  plugins: [nodeResolve({browser: true}), commonjs(), strip(), terser()]
 };
